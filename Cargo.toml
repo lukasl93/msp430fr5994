@@ -1,0 +1,25 @@
+[package]
+name = "MSP430FR5994"
+version = "0.1.0"
+authors = ["Lukas Lischke <lukas.lischke@tum.de>"]
+description = "Peripheral access crate for MSP430FR5994 microcontroller"
+keywords = ["no-std", "msp430", "ti", "launchpad"]
+repository = "https://github.com/lukasl93/msp430fr5994"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/msp430fr5994"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bare-metal = "1.0.0"
+msp430 = "0.2.2"
+vcell = "0.1.3"
+msp430-atomic = "0.1.2"
+
+[dependencies.msp430-rt]
+optional = true
+version = "0.2.0"
+
+[features]
+rt = ["msp430-rt/device"]
